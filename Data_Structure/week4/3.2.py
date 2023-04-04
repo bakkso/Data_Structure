@@ -1,30 +1,39 @@
 def delete(pos):
-    return list.pop(pos)
+    return A.pop(pos)
 
 def replace(pos, elem):
-    list[pos] = elem
+    A[pos] = elem
 
-def size():
-    return len(list)
+def size(A):
+    return len(A)
 
 def display(msg='ArrayList:'):
-    print(msg, size(), list)
+    print(msg, size(A), A)
 
-list = []
+A = []
 
-list.insert(0, 10)
+A.insert(0, 10)
 display()
-list.insert(1, 20)
+
+A.insert(1, 20)
 display()
-list.insert(0, 30)
+
+A.insert(0, 30)
 display()
-list.insert(2, 40)
+
+A.insert(2, 40)
 display()
-list.insert(size(), 50)
+
+A.insert(size(A), 50)
 display()
-list.insert(1, 60)
+
+A.insert(1, 60)
 display()
+
 replace(2, 70)
 display()
+
 delete(2)
 display()
+
+#list -> A로 변경 : 파이썬 list와 헷갈리기때문에
