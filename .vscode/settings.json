@@ -1,3 +1,4 @@
 {
-    "arduino.path": "/Users/parksoyeon/Documents/Arduino"
+    "arduino.path": "/Users/parksoyeon/Documents/Arduino",
+    "python.analysis.typeCheckingMode": "basic"
 }

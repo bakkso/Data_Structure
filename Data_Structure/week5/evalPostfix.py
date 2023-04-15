@@ -1,7 +1,8 @@
 from stackClass import Stack
 
 def evalPostfix( expr ):
-    s = Stack()			       
+    s = Stack()
+    expr.reverse()			       
     for token in expr :			
         if token in "+-*/" :	
             val2 = s.pop()		
