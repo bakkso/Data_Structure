@@ -9,11 +9,13 @@ for i in range(0, 8):
 
 
 # (start, step, stop) S 리스트의 마지막 인덱스부터 0번째 배열까지 역순으로 반복
-for i in range(len(S)-1, -1, -1):
+#for i in range(len(S)-1, -1, -1): # 조교'advice : pop(i)는 항상 pop(-1)이 될테니까 인덱싱을 할 필요는 없다
+for i in range(0,8):
     if not len(S) == 0:  # 공백이 아닐때 실행하라 (pop때문에)
-        D.append(S.pop(i))  # S는 LIFO이므로 마지막으로 들어온 요소부터 out 해줘야됨
+        D.append(S.pop())  # S는 LIFO이므로 마지막으로 들어온 요소부터 out 해줘야됨
         print(i)
         print("D   덱 : ", D)
         print("S 스택 : ", S)
 print(D)
+ 
  
