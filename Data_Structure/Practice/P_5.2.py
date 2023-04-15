@@ -3,6 +3,8 @@ from stackClass import Stack
 s1 = Stack()
 s2 = Stack()
 
+# P_5.2
+
 
 def QueueUsingStack_push(item):
     #item = input()
