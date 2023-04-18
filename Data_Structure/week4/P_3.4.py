@@ -2,10 +2,10 @@ class Polynomial:
     def __init__(self):
         self.items = []
 
-    def degree(self):
+    def degree(self):  # 다항식의 차수를 반환
         return len(self.items)
 
-    def display(self, msg="f(x) = "):
+    def display(self, msg="f(x) = "):  # 현재 다항식 출력
         print(msg, end='')
         for i in reversed(range(self.degree())):
             print(self.items[i], end='')
@@ -13,7 +13,7 @@ class Polynomial:
                 print("x^%d + " % i, end='')
         print("\n")
 
-    def add(self, b):  # 자기 자신(self)에 b를 더해라.
+    def add(self, b):  # 현재 다항식과 다항식b를 더한 새로운 다항식을 만들어 반환
         p = Polynomial()
         if self.degree() > b.degree():
             for i in range(0, self.degree()):
@@ -29,13 +29,13 @@ class Polynomial:
                     p.items.append(self.items[i] + b.items[i])
         return p
 
-    def eval(self, x):
+    def eval(self, x):  # 미지수에 x를 넣어 계산한 결과 반환
         result = 0
         for i in range(self.degree()):
             result += self.items[i]*pow(x, i)
         return result
 
-    def read(self):
+    def read(self):  # 다항식 입력받음
         self.items = list(
             map(float, input("최고차항부터 차수를 순서대로 입력하시오. : ").split(" ")))
         self.items.reverse()
