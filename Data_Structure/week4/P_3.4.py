@@ -14,10 +14,10 @@ class Polynomial:
         print("\n")
 
     def add(self, b):  # 현재 다항식과 다항식b를 더한 새로운 다항식을 만들어 반환
-        p = Polynomial()
-        if self.degree() > b.degree():
-            for i in range(0, self.degree()):
-                if (i >= b.degree()):
+        p = Polynomial()  # 더해진 새로운 다항식을 리턴받을 p선언
+        if self.degree() > b.degree():  # 현재 다항식의 차수 > 추가된 b 다항식의 차수
+            for i in range(0, self.degree()):  # 0부터 현재다항식의 차수-1까지
+                if (i >= b.degree()):  # i가 b다항식의 차수보다 크거나 같다면
                     p.items.append(self.items[i])
                 else:
                     p.items.append(self.items[i] + b.items[i])

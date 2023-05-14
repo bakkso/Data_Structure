@@ -1,4 +1,8 @@
 {
     "arduino.path": "/Users/parksoyeon/Documents/Arduino",
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }

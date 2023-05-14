@@ -1,36 +1,43 @@
 from stackClass import Stack
 
-def precedence (op):			        
-    if   op=='(' or op==')' : return 0	
-    elif op=='+' or op=='-' : return 1	
-    elif op=='*' or op=='/' : return 2	
-    else : return -1
+
+def precedence(op):
+    if op == '(' or op == ')':
+        return 0
+    elif op == '+' or op == '-':
+        return 1
+    elif op == '*' or op == '/':
+        return 2
+    else:
+        return -1
 
 
-def Infix2Postfix( expr ):		
+def Infix2Postfix(expr):
     s = Stack()
-    output = []			        
-    for term in expr :
-        if term in '(' :		
-            s.push('(')			
-        elif term in ')' :		
-            while not s.isEmpty() :
+    output = []
+    for term in expr:  # expr[::-1]
+        if term in '(':  # ( 아니라 )로 바꿔주기
+            s.push('(')
+        elif term in ')':
+            while not s.isEmpty():
                 op = s.pop()
-                if op=='(' : break;	
-                else :			    
+                if op == '(':
+                    break
+                else:
                     output.append(op)
-        elif term in "+-*/" :		
-            while not s.isEmpty() :	
-                op = s.peek()		
-                if( precedence(term) <= precedence(op)):
+        elif term in "+-*/":
+            while not s.isEmpty():
+                op = s.peek()
+                if (precedence(term) <= precedence(op)):  # <= 에서 = 빼기
                     output.append(op)
                     s.pop()
-                else: break
-            s.push(term)		
-        else :				    
-            output.append(term)	
+                else:
+                    break
+            s.push(term)
+        else:
+            output.append(term)
 
-    while not s.isEmpty() :		
-        output.append(s.pop())	
+    while not s.isEmpty():
+        output.append(s.pop())
 
     return output
