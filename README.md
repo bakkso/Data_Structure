@@ -9,9 +9,9 @@
 ```
 Data-Structure/
 └── Data_Structure/
-    ├── Exams/          # 중간, 기말시험
-    ├── Exercise/       # 과제 외 예제
-    ├── Practice/       # 테스트 코드
+    ├── Exams/          # 중간, 기말시험
+    ├── Exercise/       # 과제 외 예제
+    ├── Practice/       # 테스트 코드
     ├── Week01/         # 1주차 과제
     ├── Week02/         # 2주차 과제
     ├── Week03/         # 3주차 과제
